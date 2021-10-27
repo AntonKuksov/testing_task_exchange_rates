@@ -8,7 +8,7 @@
 
 ## Установка и запуск
 
-Официальные образы PostgreSQL берем на Docker Hub. В докере создаем контейнер Postgres:
+Официальный образ PostgreSQL берем на Docker Hub. В докере создаем контейнер Postgres:
 ```
 $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
