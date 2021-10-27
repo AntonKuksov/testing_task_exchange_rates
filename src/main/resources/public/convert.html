@@ -1,0 +1,62 @@
+<html ng-app="testApp">
+
+<head>
+    <title>Currency Converter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset=utf-8>
+</head>
+
+<body ng-controller="testController">
+    <h2>Currency Converter!!!!</h2>
+
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" ng-model="amountIn" />
+
+    </div>
+
+
+
+
+    <select ng-model="currencyIndexIn">
+    <option ng-repeat="option in result track by $index" value="{{option.title}}">{{option.title}}</option>>
+    <option value="">--Select--</option>
+</select>
+    <button ng-click="convert()">Конвертировать</button>
+    <br>
+    <br>
+
+
+
+    <input type="text" ng-model="amountOut" />
+
+    <select ng-model="currencyIndexOut">
+    <option ng-repeat="option in result track by $index" value="{{option.title}}">{{option.title}}</option>>
+    <option value="">--Select--</option>
+</select>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Incurr</th>
+            <th>Outcurr</th>
+            <th>Rate id</th>
+        </tr>
+        <tr ng-repeat="x in deals">
+            <td>{{ x.username }}</td>
+            <td>{{ x.date }}</td>
+            <td>{{ x.amount }}</td>
+            <td>{{ x.incurr }}</td>
+            <td>{{ x.outcurr }}</td>
+            <td>{{ x.cubed }}</td>
+        </tr>
+    </table>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
