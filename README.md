@@ -28,5 +28,6 @@ $ mvn package
 ```
 $ mvnw spring-boot:run
 ```
+Открыть localhost:8080/convert.html
 ## Дополнительно
 * Если после запуска база данных сама не сгенерировалась, то импортируем в базу файл postgres.txt
